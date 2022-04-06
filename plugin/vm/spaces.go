@@ -1,11 +1,14 @@
 package vm
 
 import (
-	"github.com/ava-labs/apm/definition"
+	"os/exec"
+
 	"github.com/ava-labs/avalanchego/version"
+
+	"github.com/ava-labs/avalanche-plugin/avalanche"
 )
 
-var _ definition.VM = &Spaces{}
+var _ avalanche.VM = &Spaces{}
 
 type Spaces struct {
 }
@@ -36,7 +39,8 @@ func (s Spaces) BeforeInstall() error {
 }
 
 func (s Spaces) Install() error {
-	return nil
+	cmd := exec.Command("./scripts/build.sh")
+	return cmd.Run()
 }
 
 func (s Spaces) AfterInstall() error {
@@ -47,18 +51,10 @@ func (s Spaces) Version() version.Version {
 	return version.NewDefaultVersion(0, 0, 3)
 }
 
-func (s Spaces) Repository() string {
-	return "https://github.com/ava-labs/spacesvm.git"
+func (s Spaces) URL() string {
+	return "https://github.com/ava-labs/spacesvm/archive/refs/tags/v0.0.3.tar.gz"
 }
 
 func (s Spaces) SHA256() string {
-	panic("implement me")
-}
-
-func (s Spaces) Commit() string {
-	return "10f885ffc2770951bb0fd4d2b4b658c3b9cc5caa"
-}
-
-func (s Spaces) Branch() string {
-	return "master"
+	return "1ac250f6c40472f22eaf0616fc8c886078a4eaa9b2b85fbb4fb7783a1db6af3f"
 }

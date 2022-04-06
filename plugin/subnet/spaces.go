@@ -1,19 +1,16 @@
 package subnet
 
 import (
-	"os/exec"
-
-	"github.com/ava-labs/apm/definition"
 	"github.com/ava-labs/avalanchego/chains"
-	"github.com/ava-labs/avalanchego/snow/consensus/avalanche"
+	consensus "github.com/ava-labs/avalanchego/snow/consensus/avalanche"
 	"github.com/ava-labs/avalanchego/snow/consensus/snowball"
 	"github.com/ava-labs/avalanchego/snow/networking/sender"
-	"github.com/ava-labs/avalanchego/version"
 
+	"github.com/ava-labs/avalanche-plugin/avalanche"
 	"github.com/ava-labs/avalanche-plugins-core/plugin/vm"
 )
 
-var _ definition.Subnet = &Spaces{}
+var _ avalanche.Subnet = &Spaces{}
 
 type Spaces struct {
 }
@@ -44,18 +41,16 @@ func (s Spaces) BeforeInstall() error {
 }
 
 func (s Spaces) Install() error {
-	cmd := exec.Command("./scripts/build.sh")
-	_, err := cmd.Output()
-	return err
+	return nil
 }
 
 func (s Spaces) AfterInstall() error {
 	return nil
 }
 
-func (s Spaces) VMs() map[definition.VM]version.Version {
-	return map[definition.VM]version.Version{
-		vm.Spaces{}: vm.Spaces{}.Version(),
+func (s Spaces) VMs() []avalanche.VM {
+	return []avalanche.VM{
+		&vm.Spaces{},
 	}
 }
 
@@ -68,7 +63,7 @@ func (s Spaces) SubnetConfig() *chains.SubnetConfig {
 			AppGossipValidatorSize:    10,
 		},
 		ValidatorOnly: false,
-		ConsensusParameters: avalanche.Parameters{
+		ConsensusParameters: consensus.Parameters{
 			Parameters: snowball.Parameters{
 				K:                     10,
 				Alpha:                 10,
