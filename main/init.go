@@ -9,5 +9,7 @@ import (
 
 func init() {
 	gob.Register(&subnet.Spaces{})
+	gob.Register(subnet.Spaces{})
 	gob.Register(&vm.Spaces{})
+	gob.Register(vm.Spaces{})
 }
