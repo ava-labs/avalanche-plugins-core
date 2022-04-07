@@ -29,13 +29,8 @@ func New() *Repository {
 		&vm.Spaces{},
 	}
 
-	for _, subnet := range subnets {
-		gob.Register(subnet)
-	}
-
-	for _, vm := range vms {
-		gob.Register(vm)
-	}
+	gob.Register(subnet.Spaces{})
+	gob.Register(vm.Spaces{})
 
 	plugins := &avalanche.Plugins{
 		Subnets: subnets,
