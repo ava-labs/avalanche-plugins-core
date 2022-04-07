@@ -15,46 +15,46 @@ var _ avalanche.Subnet = &Spaces{}
 type Spaces struct {
 }
 
-func (s *Spaces) ID() string {
+func (s Spaces) ID() string {
 	return "Ai42MkKqk8yjXFCpoHXw7rdTWSHiKEMqh5h8gbxwjgkCUfkrk"
 }
 
-func (s *Spaces) Alias() string {
+func (s Spaces) Alias() string {
 	return "spaces"
 }
 
-func (s *Spaces) Homepage() string {
+func (s Spaces) Homepage() string {
 	return "https://tryspaces.xyz"
 }
 
-func (s *Spaces) Description() string {
+func (s Spaces) Description() string {
 	return "Spaces enables authenticated, hierarchical storage of arbitrary " +
 		"keys/values using any EIP-712 compatible wallet."
 }
 
-func (s *Spaces) Maintainers() []string {
+func (s Spaces) Maintainers() []string {
 	return []string{"patrickogrady@avalabs.org"}
 }
 
-func (s *Spaces) BeforeInstall() error {
+func (s Spaces) BeforeInstall() error {
 	return nil
 }
 
-func (s *Spaces) Install() error {
+func (s Spaces) Install() error {
 	return nil
 }
 
-func (s *Spaces) AfterInstall() error {
+func (s Spaces) AfterInstall() error {
 	return nil
 }
 
-func (s *Spaces) VMs() []avalanche.VM {
+func (s Spaces) VMs() []avalanche.VM {
 	return []avalanche.VM{
 		&vm.Spaces{},
 	}
 }
 
-func (s *Spaces) SubnetConfig() *chains.SubnetConfig {
+func (s Spaces) SubnetConfig() *chains.SubnetConfig {
 	return &chains.SubnetConfig{
 		GossipConfig: sender.GossipConfig{
 			AcceptedFrontierSize:      10,
