@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	Name = "avalanche-plugins-core"
+	Name = "ava-labs/avalanche-plugins-core"
 	URL  = "https://github.com/ava-labs/avalanche-plugins-core.git"
 )
 

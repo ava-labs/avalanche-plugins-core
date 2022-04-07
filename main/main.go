@@ -19,5 +19,6 @@ func main() {
 	plugin.Serve(&plugin.ServeConfig{
 		HandshakeConfig: core.HandshakeConfig,
 		Plugins:         pluginMap,
+		GRPCServer:      plugin.DefaultGRPCServer,
 	})
 }
