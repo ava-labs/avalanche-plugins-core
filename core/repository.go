@@ -9,8 +9,8 @@ import (
 )
 
 const (
-	URL  = "https://github.com/ava-labs/avalanche-plugins-core"
-	Name = "ava-labs/avalanche-plugins-core"
+	Name = "avalanche-plugins-core"
+	URL  = "https://github.com/ava-labs/avalanche-plugins-core.git"
 )
 
 var _ plugin.Repository = &Repository{}

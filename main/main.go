@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/hashicorp/go-plugin"
 
 	avaxPlugin "github.com/ava-labs/avalanche-plugin/plugin"
@@ -17,8 +15,6 @@ func main() {
 	var pluginMap = map[string]plugin.Plugin{
 		"repository": &avaxPlugin.RPCRepository{Impl: repo},
 	}
-
-	fmt.Println("Core loaded.")
 
 	plugin.Serve(&plugin.ServeConfig{
 		HandshakeConfig: core.HandshakeConfig,
