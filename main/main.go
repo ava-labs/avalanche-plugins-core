@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-	// pluginMap is the map of plugins we can dispense.
 	repo := core.New()
 
 	var pluginMap = map[string]plugin.Plugin{

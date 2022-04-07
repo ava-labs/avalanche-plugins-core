@@ -15,28 +15,28 @@ const (
 var _ plugin.Repository = &Repository{}
 
 type Repository struct {
-	AvaxPlugins avalanche.Plugins
+	avaxPlugins *avalanche.Plugins
 }
 
 func New() *Repository {
 	subnets := []avalanche.Subnet{
-		&subnet.Spaces{},
+		subnet.Spaces{},
 	}
 
 	vms := []avalanche.VM{
-		&vm.Spaces{},
+		vm.Spaces{},
 	}
 
-	plugins := avalanche.Plugins{
+	plugins := &avalanche.Plugins{
 		Subnets: subnets,
 		VMs:     vms,
 	}
 
 	return &Repository{
-		AvaxPlugins: plugins,
+		avaxPlugins: plugins,
 	}
 }
 
 func (r Repository) Plugins() (avalanche.Plugins, error) {
-	return r.AvaxPlugins, nil
+	return *r.avaxPlugins, nil
 }
