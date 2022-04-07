@@ -20,11 +20,11 @@ type Repository struct {
 
 func New() *Repository {
 	subnets := []avalanche.Subnet{
-		subnet.Spaces{},
+		&subnet.Spaces{},
 	}
 
 	vms := []avalanche.VM{
-		vm.Spaces{},
+		&vm.Spaces{},
 	}
 
 	plugins := &avalanche.Plugins{
