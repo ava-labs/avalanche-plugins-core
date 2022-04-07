@@ -3,7 +3,6 @@ package core
 import (
 	"github.com/ava-labs/avalanche-plugin/avalanche"
 	"github.com/ava-labs/avalanche-plugin/plugin"
-
 	"github.com/ava-labs/avalanche-plugins-core/plugin/subnet"
 	"github.com/ava-labs/avalanche-plugins-core/plugin/vm"
 )
@@ -16,7 +15,7 @@ const (
 var _ plugin.Repository = &Repository{}
 
 type Repository struct {
-	plugins avalanche.Plugins
+	AvaxPlugins avalanche.Plugins
 }
 
 func New() *Repository {
@@ -34,10 +33,10 @@ func New() *Repository {
 	}
 
 	return &Repository{
-		plugins: plugins,
+		AvaxPlugins: plugins,
 	}
 }
 
 func (r Repository) Plugins() (avalanche.Plugins, error) {
-	return r.plugins, nil
+	return r.AvaxPlugins, nil
 }
