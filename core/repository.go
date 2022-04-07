@@ -1,6 +1,8 @@
 package core
 
 import (
+	"encoding/gob"
+
 	"github.com/ava-labs/avalanche-plugin/avalanche"
 	"github.com/ava-labs/avalanche-plugin/plugin"
 	"github.com/ava-labs/avalanche-plugins-core/plugin/subnet"
@@ -25,6 +27,14 @@ func New() *Repository {
 
 	vms := []avalanche.VM{
 		&vm.Spaces{},
+	}
+
+	for _, subnet := range subnets {
+		gob.Register(subnet)
+	}
+
+	for _, vm := range vms {
+		gob.Register(vm)
 	}
 
 	plugins := &avalanche.Plugins{
