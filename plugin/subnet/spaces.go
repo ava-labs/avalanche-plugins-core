@@ -10,7 +10,9 @@ import (
 	"github.com/ava-labs/avalanche-plugins-core/plugin/vm"
 )
 
-var _ avalanche.Subnet = &Spaces{}
+var (
+	_ avalanche.Subnet = &Spaces{}
+)
 
 type Spaces struct {
 }
@@ -36,21 +38,15 @@ func (s *Spaces) Maintainers() []string {
 	return []string{"patrickogrady@avalabs.org"}
 }
 
-func (s *Spaces) BeforeInstall() error {
-	return nil
-}
-
 func (s *Spaces) Install() error {
 	return nil
 }
 
-func (s *Spaces) AfterInstall() error {
-	return nil
-}
+func (s *Spaces) VMs() []string {
+	spacesVM := vm.Spaces{}
 
-func (s *Spaces) VMs() []avalanche.VM {
-	return []avalanche.VM{
-		&vm.Spaces{},
+	return []string{
+		spacesVM.Alias(),
 	}
 }
 
