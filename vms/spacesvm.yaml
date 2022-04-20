@@ -8,3 +8,7 @@ vm:
   installScript: "./scripts/build.sh"
   url: "https://github.com/ava-labs/spacesvm/archive/refs/tags/v0.0.3.tar.gz"
   sha256: "1ac250f6c40472f22eaf0616fc8c886078a4eaa9b2b85fbb4fb7783a1db6af3f"
+  version:
+    major: 0
+    minor: 0
+    patch: 3
