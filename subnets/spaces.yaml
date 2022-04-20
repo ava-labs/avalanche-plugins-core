@@ -1,0 +1,35 @@
+subnet:
+  id: "Ai42MkKqk8yjXFCpoHXw7rdTWSHiKEMqh5h8gbxwjgkCUfkrk"
+  alias: "spaces"
+  homepage: "https://tryspaces.xyz"
+  description: |
+    Spaces enables authenticated, hierarchical storage of arbitrary keys/values using any EIP-712 compatible wallet.
+  maintainers:
+    - "patrickogrady@avalabs.org"
+  installScript: "" # no install script needed
+  vms:
+    - "spacesvm"
+  config:
+    # This the default subnet config as of avalanchego v1.7.10
+    gossipAcceptedFrontierValidatorSize: 0
+    gossipAcceptedFrontierNonValidatorSize: 0
+    gossipAcceptedFrontierPeerSize: 35
+    gossipOnAcceptValidatorSize: 0
+    gossipOnAcceptNonValidatorSize: 0
+    gossipOnAcceptPeerSize: 20
+    appGossipValidatorSize: 10
+    appGossipNonValidatorSize: 0
+    appGossipPeerSize: 0
+    validatorOnly: false
+    consensusParameters:
+      k: 20
+      alpha: 15
+      betaVirtuous: 15
+      betaRogue: 20
+      concurrentRepolls: 4
+      optimalProcessing: 50
+      maxOutstandingItems: 1024
+      maxItemProcessingTime: 120_000_000_000
+      parents: 5
+      batchSize: 30
+

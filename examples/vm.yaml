@@ -1,0 +1,11 @@
+vm:
+  id: "<your base58 encoded id here>"
+  alias: "<your unique alias here>"
+  homepage: "<your website here>"
+  description: |
+    <your description here>
+  maintainers:
+    - "<your email here>"
+  installScript: "<your install script path here>"
+  url: "<a link to your release here>"
+  sha256: "<your sha256 checksume here>"
