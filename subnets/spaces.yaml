@@ -11,6 +11,7 @@ subnet:
     - "spacesvm"
   config:
     # This the default subnet config as of avalanchego v1.7.10
+    # TODO remove this
     gossipAcceptedFrontierValidatorSize: 0
     gossipAcceptedFrontierNonValidatorSize: 0
     gossipAcceptedFrontierPeerSize: 35
