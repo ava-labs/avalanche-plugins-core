@@ -1,0 +1,15 @@
+vm:
+  id: "mDV3QWRXfwgKUWb9sggkv4vQxAQR4y2CyKrt5pLZ5SzQ7EHBv"
+  alias: "dfk-evm"
+  homepage: "https://defikingdoms.com/"
+  description: "VM for the DeFi Kingdoms (dfk) subnet"
+  maintainers:
+    - "unknown"
+  installScript: "scripts/build.sh"
+  binaryPath: "build/mDV3QWRXfwgKUWb9sggkv4vQxAQR4y2CyKrt5pLZ5SzQ7EHBv"
+  url: "https://github.com/DefiKingdoms/subnet-evm/archive/refs/tags/v0.2.4.tar.gz"
+  sha256: "4b8b8a30fae505014db16724fb18bd59d4012e516a56e67544a7eaf015a5f216"
+  version:
+    major: 0
+    minor: 2
+    patch: 4
