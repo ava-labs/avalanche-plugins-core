@@ -1,0 +1,15 @@
+vm:
+  id: "kM6h4LYe3AcEU1MB2UNg6ubzAiDAALZzpVrbX8zn3hXF6Avd8"
+  alias: "blobvm"
+  homepage: "https://github.com/ava-labs/blobvm"
+  description: "Content-Addressable Key-Value Store w/EIP-712 Compatibility and Fee-Based Metering"
+  maintainers:
+    - "patrickogrady@avalabs.org"
+  installScript: "scripts/build.sh"
+  binaryPath: "build/kM6h4LYe3AcEU1MB2UNg6ubzAiDAALZzpVrbX8zn3hXF6Avd8"
+  url: "https://github.com/ava-labs/blobvm/archive/refs/tags/v0.0.6.tar.gz"
+  sha256: "72d1b8fa3ee89412b406e7b0e9a968ca06746ea1bb5dd02c2b87f1ad1eaa4ca6"
+  version:
+    major: 0
+    minor: 0
+    patch: 6
