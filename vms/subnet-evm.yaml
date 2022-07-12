@@ -1,0 +1,15 @@
+vm:
+  id: "srEXiWaHuhNyGwPUi444Tu47ZEDwxTWrbQiuD7FmgSAQ6X7Dy"
+  alias: "subnet-evm"
+  homepage: "https://github.com/ava-labs/subnet-evm"
+  description: "Subnet EVM is the Virtual Machine (VM) that defines the Subnet Contract Chains. Subnet EVM is a simplified version of Coreth VM (C-Chain). This chain implements the Ethereum Virtual Machine and supports Solidity smart contracts as well as most other Ethereum client functionality."
+  maintainers:
+    - "patrickogrady@avalabs.org"
+  installScript: "scripts/build.sh build/srEXiWaHuhNyGwPUi444Tu47ZEDwxTWrbQiuD7FmgSAQ6X7Dy"
+  binaryPath: "build/srEXiWaHuhNyGwPUi444Tu47ZEDwxTWrbQiuD7FmgSAQ6X7Dy"
+  url: "https://github.com/ava-labs/subnet-evm/archive/refs/tags/v0.2.5.tar.gz"
+  sha256: "6b67d84f19380a932d7e5fc20d3f2fa22e4dcfd4eb63d84cac72378ab54daa12"
+  version:
+    major: 0
+    minor: 2
+    patch: 5
