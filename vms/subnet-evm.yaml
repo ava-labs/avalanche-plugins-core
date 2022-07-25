@@ -7,9 +7,9 @@ vm:
     - "patrickogrady@avalabs.org"
   installScript: "scripts/build.sh build/srEXiWaHuhNyGwPUi444Tu47ZEDwxTWrbQiuD7FmgSAQ6X7Dy"
   binaryPath: "build/srEXiWaHuhNyGwPUi444Tu47ZEDwxTWrbQiuD7FmgSAQ6X7Dy"
-  url: "https://github.com/ava-labs/subnet-evm/archive/refs/tags/v0.2.5.tar.gz"
-  sha256: "6b67d84f19380a932d7e5fc20d3f2fa22e4dcfd4eb63d84cac72378ab54daa12"
+  url: "https://github.com/ava-labs/subnet-evm/archive/refs/tags/v0.2.7.tar.gz"
+  sha256: "c0d63b56031820007cce5fa8ea635628b8b9a5897111290a78b60538838509f8"
   version:
     major: 0
     minor: 2
-    patch: 5
+    patch: 7
