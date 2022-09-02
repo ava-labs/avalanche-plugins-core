@@ -1,10 +1,10 @@
-subnet:
-  id: "28nrH5T2BMvNrWecFcV3mfccjs6axM1TVyqe79MCv2Mhs8kxiY"
-  alias: "wagmi"
-  homepage: "https://github.com/ava-labs/subnet-evm"
-  description: |
-    The WAGMI ("We're All Going to Make It") Subnet Demo is a high throughput testbed for EVM (Ethereum Virtual Machine) optimizations. It is parameterized to run at a factor more capacity than Fuji/Mainnet C-Chain and will be used to experiment with release candidates before they make it into an official coreth release.
-  maintainers:
-    - "patrickogrady@avalabs.org"
-  vms:
-    - "subnet-evm"
+id:
+  testnet: "28nrH5T2BMvNrWecFcV3mfccjs6axM1TVyqe79MCv2Mhs8kxiY"
+alias: "wagmi"
+homepage: "https://github.com/ava-labs/subnet-evm"
+description: |
+  The WAGMI ("We're All Going to Make It") Subnet Demo is a high throughput testbed for EVM (Ethereum Virtual Machine) optimizations. It is parameterized to run at a factor more capacity than Fuji/Mainnet C-Chain and will be used to experiment with release candidates before they make it into an official coreth release.
+maintainers:
+  - "patrickogrady@avalabs.org"
+vms:
+  - "subnet-evm"
